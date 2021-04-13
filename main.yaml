@@ -1,0 +1,9 @@
+- hosts: lb-nodes
+  become: yes
+  remote_user: administrator
+  become_user: root
+
+  vars_files:
+    - vars/main.yaml
+  tasks:
+    - include: tasks/main.yaml
